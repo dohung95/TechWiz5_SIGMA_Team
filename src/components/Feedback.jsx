@@ -54,9 +54,9 @@ const Feedback = () => {
         <>
             <MyNav />
             <div className="bg">
-                <div className='row'>
+                <div className='row' style={{ marginRight: "0" }}>
                     <div>
-                        <h2 align='center' style={{ fontSize: "5vw" }}>Feedback and Rate</h2>
+                        <h2 align='center' className="title_Hung">Feedback and Rate</h2>
                     </div>
                     <div className='col-md-5'>
                         <form onSubmit={handleSubmit} className="feedback-container">
