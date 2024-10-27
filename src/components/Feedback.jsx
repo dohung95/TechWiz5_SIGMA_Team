@@ -30,25 +30,25 @@ const Feedback = () => {
     };
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        
-        const newErrors = {};
-        if (!formData.name) newErrors.name = "Name cannot be left empty!";
-        if (!formData.email) newErrors.email = "Email cannot be left empty!";
-        if (!formData.comment) newErrors.comment = "Feedback cannot be left empty!";
-        if (!formData.rating) newErrors.rating = "Please provide a rating!";
-        
-        if (Object.keys(newErrors).length > 0) {
-            setErrors(newErrors);
-            return;
-        }
-        
-        setErrors({});
-        setFeedbackList([...feedbackList, { rating: formData.rating, comment: formData.comment }]);
-        setFormData({ name: '', email: '', comment: '', rating: 0 });
-        
-        alert("Feedback has been sent, thank you.");
-    };
+    e.preventDefault();
+    
+    const newErrors = {};
+    if (!formData.name) newErrors.name = "Name cannot be left empty!";
+    if (!formData.email) newErrors.email = "Email cannot be left empty!";
+    if (!formData.comment) newErrors.comment = "Feedback cannot be left empty!";
+    if (!formData.rating) newErrors.rating = "Please provide a rating!";
+    
+    if (Object.keys(newErrors).length > 0) {
+        setErrors(newErrors);
+        return;
+    }
+    
+    setErrors({});
+    setFeedbackList([{ rating: formData.rating, comment: formData.comment }, ...feedbackList]);
+    setFormData({ name: '', email: '', comment: '', rating: 0 });
+    
+    alert("Feedback has been sent, thank you.");
+};
 
     return (
         <>
@@ -56,7 +56,7 @@ const Feedback = () => {
             <div className="bg">
                 <div className='row'>
                     <div>
-                        <h2 align='center' className="title_Hung">Feedback and Rate</h2>
+                        <h2 align='center' style={{ fontSize: "5vw" }}>Feedback and Rate</h2>
                     </div>
                     <div className='col-md-5'>
                         <form onSubmit={handleSubmit} className="feedback-container">
