@@ -44,7 +44,7 @@ const MyNav = () => {
                                 <Link to='/' className='btn-link' >Home</Link>
                             </Dropdown.Item>
                             <Dropdown.Item >
-                                <Link to='/search' className='btn-link' >eAmbulance Type</Link>
+                                <Link to='/search' className='btn-link' >Ambulance</Link>
                             </Dropdown.Item>
                             <Dropdown.Item >
                                 <Link to='/gallery' className='btn-link' >Gallery</Link>
