@@ -7,6 +7,7 @@ const BookingButton = () => {
   const [selectedHospital, setSelectedHospital] = useState('');
   const [selectedService, setSelectedService] = useState('');
   const [pickupLocation, setPickupLocation] = useState('');
+  const [phone, setPhone] = useState('');
   const [price, setPrice] = useState('');
 
   const handleShow = () => setShowModal(true);
@@ -44,7 +45,8 @@ const BookingButton = () => {
       hospital: selectedHospital,
       service: selectedService,
       price: price,
-      pickupLocation: pickupLocation
+      pickupLocation: pickupLocation,
+      phone: phone,
     };
 
     const message = `
@@ -52,6 +54,7 @@ const BookingButton = () => {
       Service: ${bookingData.service}
       Price: ${bookingData.price}
       Pickup Location: ${bookingData.pickupLocation}
+      Your Phone: ${bookingData.phone}
     `;
 
     alert("Your request has been accepted! Thank you for using the service.\n" + message);
@@ -128,6 +131,17 @@ const BookingButton = () => {
                 placeholder="Enter your Location"
                 value={pickupLocation}
                 onChange={(e) => setPickupLocation(e.target.value)}
+                required
+              />
+            </Form.Group>
+
+            <Form.Group controlId="formPhone" className="mt-3">
+              <Form.Label>Phone Number</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter your phone number"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
                 required
               />
             </Form.Group>
