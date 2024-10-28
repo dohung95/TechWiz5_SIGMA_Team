@@ -269,7 +269,7 @@ const Search = ({ data = Ambulance }) => {
             <input
               type="text"
               value={searchTerm}
-              placeholder="Search ..."
+              placeholder="Search Type/Price/Size"
               onChange={handleSearch}
               className="search"
             />
@@ -312,19 +312,21 @@ const Search = ({ data = Ambulance }) => {
           <div style={{ paddingRight: "2%" }}>
             <BookingButton/>
           </div>
-          <div className="hos-table">
-            <MyCustomSelect
-              options={hospitalOptions}
-              defaultValue={selectedHospital}
-              onChange={handleHospitalChange}
-            />
-          </div>
+          
         </div>
 
 
         <div className="container">
           <div className="row">
             <div className="col-md-5 p-3">
+            <div className="hos-table">
+            <MyCustomSelect
+              options={hospitalOptions}
+              defaultValue={selectedHospital}
+              onChange={handleHospitalChange}
+            />
+          </div>
+          <br />
               <div >
                 {selectedHospital && (
                   <img
@@ -335,6 +337,7 @@ const Search = ({ data = Ambulance }) => {
                   />
                 )}
               </div>
+             
             </div>
             <div className="col-md-7 p-3">
               <div >

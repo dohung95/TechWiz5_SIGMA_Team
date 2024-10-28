@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/TechWiz5_SIGMA_Team/static/css/main.1cb771e8.css",
-    "main.js": "/TechWiz5_SIGMA_Team/static/js/main.e5f164c4.js",
+    "main.js": "/TechWiz5_SIGMA_Team/static/js/main.dc042bfe.js",
     "static/media/vietphap.png": "/TechWiz5_SIGMA_Team/static/media/vietphap.d13f2ce3792e53e8a6f8.png",
     "static/media/xethuong7.png": "/TechWiz5_SIGMA_Team/static/media/xethuong7.21194c18f5a32d538073.png",
     "static/media/teamSigma.png": "/TechWiz5_SIGMA_Team/static/media/teamSigma.425677df2a705f9ce1ec.png",
@@ -58,10 +58,10 @@
     "index.html": "/TechWiz5_SIGMA_Team/index.html",
     "static/media/icon.svg": "/TechWiz5_SIGMA_Team/static/media/icon.317bc50c92894bf177b7fef280dcd505.svg",
     "main.1cb771e8.css.map": "/TechWiz5_SIGMA_Team/static/css/main.1cb771e8.css.map",
-    "main.e5f164c4.js.map": "/TechWiz5_SIGMA_Team/static/js/main.e5f164c4.js.map"
+    "main.dc042bfe.js.map": "/TechWiz5_SIGMA_Team/static/js/main.dc042bfe.js.map"
   },
   "entrypoints": [
     "static/css/main.1cb771e8.css",
-    "static/js/main.e5f164c4.js"
+    "static/js/main.dc042bfe.js"
   ]
 }
