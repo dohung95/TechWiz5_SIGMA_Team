@@ -41,6 +41,11 @@ const BookingButton = () => {
       return;
     }
 
+    if (!/^\d{10,}$/.test(phone)) {
+      alert('Invalid phone number. Please enter at least 10 digits.');
+      return;
+    }
+
     const bookingData = {
       hospital: selectedHospital,
       service: selectedService,
@@ -54,7 +59,7 @@ const BookingButton = () => {
       Service: ${bookingData.service}
       Price: ${bookingData.price}
       Pickup Location: ${bookingData.pickupLocation}
-      Your Phone: ${bookingData.phone}
+      Phone: ${bookingData.phone}
     `;
 
     alert("Your request has been accepted! Thank you for using the service.\n" + message);
@@ -141,9 +146,17 @@ const BookingButton = () => {
                 type="text"
                 placeholder="Enter your phone number"
                 value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                onChange={(e) => {
+                  const input = e.target.value;
+                  if (/^\d*$/.test(input)) { // Chỉ chấp nhận chữ số
+                    setPhone(input);
+                  }
+                }}
                 required
               />
+              <Form.Text className="text-muted">
+              Phone number must contain at least 10 digits.
+              </Form.Text>
             </Form.Group>
 
             <Button variant="warning" type="submit" className="mt-3">
